@@ -16,11 +16,6 @@ dependencies:
   equatable: ^2.0.3
   glob: ^2.0.2
   gql_code_builder: ^0.3.0-alpha
-  gql_dedupe_link: ^2.0.2-alpha
-  gql_exec: ^0.3.2-alpha
-  gql_http_link: ^0.4.2-alpha
-  gql_link: ^0.4.2-alpha
-  gql: ^0.13.1-alpha
   http: ^0.13.4
   json_annotation: ^4.4.0
   path: ^1.8.0
