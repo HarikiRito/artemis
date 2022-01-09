@@ -197,6 +197,14 @@ class GeneratorVisitor extends RecursiveVisitor {
       }
     }
 
+    final hasNullableDirective = node.directives
+        .any((directive) => directive.name.value == 'includeNull');
+
+    /// Allow nullable value in variables
+    if (hasNullableDirective) {
+      jsonKeyAnnotation['includeIfNull'] = 'true';
+    }
+
     final inputName = QueryInputName(name: node.variable.name.value);
 
     if (inputName.namePrintable != inputName.name) {
