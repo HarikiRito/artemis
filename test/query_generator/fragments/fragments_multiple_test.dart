@@ -319,7 +319,7 @@ class PaginationInput extends JsonSerializable with EquatableMixin {
   Map<String, dynamic> toJson() => _$PaginationInputToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class VoyagesDataArguments extends JsonSerializable with EquatableMixin {
   VoyagesDataArguments({required this.input});
 

@@ -250,7 +250,7 @@ class GetAllPokemons$Query extends JsonSerializable with EquatableMixin {
   Map<String, dynamic> toJson() => _$GetAllPokemons$QueryToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class GetPokemonArguments extends JsonSerializable with EquatableMixin {
   GetPokemonArguments({required this.name});
 
@@ -336,7 +336,7 @@ class GetPokemonQuery
       GetPokemon$Query.fromJson(json);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class GetAllPokemonsArguments extends JsonSerializable with EquatableMixin {
   GetAllPokemonsArguments({required this.first});
 

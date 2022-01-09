@@ -194,7 +194,7 @@ enum MyEnum {
   artemisUnknown,
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SomeQueryArguments extends JsonSerializable with EquatableMixin {
   SomeQueryArguments({required this.filter});
 

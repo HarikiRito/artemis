@@ -165,7 +165,7 @@ enum ArticleType {
   artemisUnknown,
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BrowseArticlesArguments extends JsonSerializable with EquatableMixin {
   BrowseArticlesArguments({this.article_type_in});
 

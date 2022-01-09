@@ -529,7 +529,7 @@ import 'package:equatable/equatable.dart';
 import 'package:gql/ast.dart';
 part 'test_query.graphql.g.dart';
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class TestQueryArguments extends JsonSerializable with EquatableMixin {
   TestQueryArguments({this.name});
 
@@ -588,7 +588,8 @@ class TestQueryQuery extends GraphQLQuery<TestQuery, TestQueryArguments> {
 
       final str = specToString(generateArgumentClassSpec(definition));
 
-      expect(str, '''@JsonSerializable(explicitToJson: true)
+      expect(
+          str, '''@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class TestQueryArguments extends JsonSerializable with EquatableMixin {
   TestQueryArguments({this.name});
 
