@@ -10,5 +10,7 @@ Follow instruction of the original package [documentation](https://github.com/co
 
 ```yaml
 dev_dependencies:
-  artemis_graphql_builder: '>=7.0.0 <= 8.0.0'
+  artemis:
+    git:
+      url: https://github.com/HarikiRito/artemis.git
 ```
