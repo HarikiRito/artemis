@@ -1,8 +1,8 @@
 name: artemis
-version: 7.3.0-beta
+version: 7.3.0-alpha.1
 
 description: Build dart types from GraphQL schemas and queries (using Introspection Query).
-homepage: https://github.com/comigor/artemis
+homepage: https://github.com/HarikiRito/artemis
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
