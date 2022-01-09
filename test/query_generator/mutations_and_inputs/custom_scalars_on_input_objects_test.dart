@@ -199,7 +199,7 @@ class Input extends JsonSerializable with EquatableMixin {
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CustomArguments extends JsonSerializable with EquatableMixin {
   CustomArguments({required this.input, this.previousId, this.listIds});
 

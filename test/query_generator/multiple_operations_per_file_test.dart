@@ -247,7 +247,7 @@ class QueData$Query extends JsonSerializable with EquatableMixin {
   Map<String, dynamic> toJson() => _$QueData$QueryToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class MutDataArguments extends JsonSerializable with EquatableMixin {
   MutDataArguments({required this.input});
 
@@ -316,7 +316,7 @@ class MutDataMutation extends GraphQLQuery<MutData$Mutation, MutDataArguments> {
       MutData$Mutation.fromJson(json);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class QueDataArguments extends JsonSerializable with EquatableMixin {
   QueDataArguments({required this.intsNonNullable, this.stringNullable});
 

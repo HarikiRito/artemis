@@ -141,7 +141,7 @@ class SomeQuery$Query extends JsonSerializable with EquatableMixin {
   Map<String, dynamic> toJson() => _$SomeQuery$QueryToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class SomeQueryArguments extends JsonSerializable with EquatableMixin {
   SomeQueryArguments(
       {this.i,

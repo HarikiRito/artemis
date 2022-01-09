@@ -221,7 +221,7 @@ enum OtherEnum {
   artemisUnknown,
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CustomArguments extends JsonSerializable with EquatableMixin {
   CustomArguments({required this.$id, required this.input, required this.o});
 

@@ -212,8 +212,8 @@ Spec fragmentClassDefinitionToSpec(FragmentClassDefinition definition) {
 Spec generateArgumentClassSpec(QueryDefinition definition) {
   return Class(
     (b) => b
-      ..annotations
-          .add(CodeExpression(Code('JsonSerializable(explicitToJson: true)')))
+      ..annotations.add(CodeExpression(
+          Code('JsonSerializable(explicitToJson: true, includeIfNull: false)')))
       ..name = '${definition.className}Arguments'
       ..extend = refer('JsonSerializable')
       ..mixins.add(refer('EquatableMixin'))

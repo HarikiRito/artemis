@@ -495,7 +495,7 @@ enum NotificationType {
   artemisUnknown,
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class BrowseRepositoriesArguments extends JsonSerializable with EquatableMixin {
   BrowseRepositoriesArguments({this.notificationTypes});
 

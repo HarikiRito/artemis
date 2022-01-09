@@ -234,7 +234,7 @@ class CustomList$Mutation extends JsonSerializable with EquatableMixin {
   Map<String, dynamic> toJson() => _$CustomList$MutationToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CustomArguments extends JsonSerializable with EquatableMixin {
   CustomArguments({required this.input});
 
@@ -303,7 +303,7 @@ class CustomMutation extends GraphQLQuery<Custom$Mutation, CustomArguments> {
       Custom$Mutation.fromJson(json);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class CustomListArguments extends JsonSerializable with EquatableMixin {
   CustomListArguments({required this.input});
 
