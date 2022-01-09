@@ -3,14 +3,6 @@ on: pull_request
 name: CI
 
 jobs:
-  check-version-and-changelog:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: comigor/actions/check-version-and-changelog@master
-        with:
-          repo_token: ${{ github.token }}
-          base_ref: ${{ github.base_ref }}
   lint:
     runs-on: ubuntu-latest
     steps:
